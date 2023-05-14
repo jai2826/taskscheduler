@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     const savedTasks = localStorage.getItem("tasks")
-    setTasks(prev=>[ ...prev, JSON.parse(savedTasks)])
+    setTasks(JSON.parse(savedTasks))
   }, [])
   useEffect(() => {
       setTimeout(() => {
