@@ -2,7 +2,7 @@ import AppContext from "@/components/AppContext";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 
-const addtask = () => {
+const Addtask = () => {
     const router = useRouter();
   const context = useContext(AppContext);
   const {tasks, setTasks} = context;
@@ -82,4 +82,4 @@ const addtask = () => {
     </div>
   );
 };
-export default addtask;
+export default Addtask;
