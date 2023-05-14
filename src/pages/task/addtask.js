@@ -29,7 +29,7 @@ const Addtask = () => {
   const handleSubmit = async(e)=>{
       e.preventDefault()
     const data = {
-      id: tasks.length+1,
+      id: tasks.length||0  +1,
       time: timeRange.start + " - "+timeRange.end,
       msg: taskmsg,
     }
