@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div className='flex flex-col w-4/5  h-full items-center  p-10 border'>
         <ul className='space-y-2 '>
-          {context.tasks.map(item =>{
+          {context.task && context.tasks.map(item =>{
           return (
            <li key={item.id} >
             <Link href={`/task/${item.id}`}>
