@@ -29,8 +29,9 @@ const Addtask = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const length = tasks==null?0:tasks.length+1
     const data = {
-      id: tasks.length || 0 + 1,
+      id: length,
       time: timeRange.start + " - " + timeRange.end,
       msg: taskmsg,
     };
@@ -69,7 +70,7 @@ const Addtask = () => {
         </div>
         <div className="space-y-2 flex flex-col justify-items-start w-2/5">
           <label htmlFor="task" className="text-2xl font-semibold ">
-            Enter the Task
+            Enter the Name of the Task
           </label>
           <div className="flex space-x-4 h-fit">
             <textarea

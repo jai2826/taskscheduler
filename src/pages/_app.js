@@ -23,19 +23,7 @@ export default function App({ Component, pageProps }) {
     time:"14:00-16:00"
   },
 ]);
-
-
-
-  useEffect(() => {
-    const savedTasks = localStorage.getItem("tasks")
-    setTasks(JSON.parse(savedTasks))
-  }, [])
-  useEffect(() => {
-      setTimeout(() => {
-      localStorage.setItem("tasks", JSON.stringify(tasks))
-    }, 1000);
-  }, [tasks])
-  
+ 
 
   return (
     <AppContext.Provider value={{ tasks, setTasks }}>
