@@ -78,7 +78,7 @@ const Addtask = () => {
             Enter the Name of the Task
           </label>
           <textarea
-            className="border w-full h-20"
+            className="border w-full h-20 px-1"
             onChange={(e) => handleTask(e)}
             name="task"
             
